@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style type="text/css">
+/*在盒子的内部前面插入一个行显示的盒子
+必须和content一起使用，即使没有内容插入，也要写一个空字符串*/
+#shi:before{
+	content:'锄禾日当午,';
+	width:150px;
+	background-color:#f00;
+	display:inline-block;
+	}
+#shi:after{
+	content:'谁知盘中餐';
+	width:200px;
+	background-color:#036;
+	display:inline-block;
+	}
+</style>
+</head>
+
+<body>
+<div id="shi">汗滴禾下土，</div>
+</body>
+</html>

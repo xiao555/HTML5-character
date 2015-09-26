@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style type="text/css">
+body{
+	background-color:#ccc;
+}
+#phone{
+	width:250px;
+	height:500px;
+	background-color:#2e2e2e;
+	margin:60px auto;
+	border:#3d3d3d solid 10px;
+	border-radius:50px;
+	box-shadow:3px 5px 5px 1px rgba(0,0,0,0.5);
+	position:relative;
+}
+#phone:before{
+	content:'';
+	height:6px;
+	width:50px;
+	background-color:#2e2e2e;
+	display:block;
+	position:absolute;
+	top:-16px;
+	left:150px;
+	border-radius:3px 3px 0  0;
+}
+#phone:after{
+	content:'';
+	width:6px;
+	height:50px;
+	background-color:#2e2e2e;
+	display:block;
+	position:absolute;
+	left:-16px;
+	top:60px;
+	border-radius:3px 0 0 3px;}
+#camera{
+	width:6px;
+	height:6px;
+	border:#4a4a4a solid 3px;
+	margin:20px auto 0px;
+	background-color:#1a1a1a;
+	border-radius:50%;
+	box-shadow:1px 2px 2px rgba(0,0,0,0.5); 
+	}
+#headphone{
+	width:60px;
+	height:5px;
+	border:#4a4a4a solid 4px;
+	margin:13px auto;
+	background-color:#1a1a1a;
+	border-radius:10px;
+	box-shadow:1px 2px 2px rgba(0,0,0,0.5);
+	}
+#screen{
+	width:220px;
+	height:360px;
+	margin:15px auto 0;
+	/*background:url(imag/5.jpg)  center fixed no-repeat;*/
+	border:#1a1a1a solid 4px;
+	}
+#btn{
+	width:40px;
+	height:40px;
+	background-color:#1a1a1a;
+	margin:8px auto 0;
+	border-radius:50%;
+	box-shadow:2px 2px 2px rgba(0,0,0,0.5) inset;
+	overflow:hidden;     /*阻止边界的传导*/
+	}
+#btn:before{
+	content:'';
+	width:20px;
+	height:20px;
+	border:#FFFFFF solid 2px;
+	display:block;
+	margin:9px auto;
+	border-radius:5px;
+	}
+</style>
+</head>
+
+<body>
+<div id="phone">
+	<div id="camera"></div>
+    <div id="headphone"></div>
+    <div id="screen"><img src="imag/5.jpg" width="100%" height="100%"></div>
+    <div id="btn"></div>
+</div>
+</body>
+</html>

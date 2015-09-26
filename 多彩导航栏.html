@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style type="text/css">
+#nav{
+	list-style-type:none;    /*去掉无序列表前面的点*/
+	margin:50px auto 0px;	 /*上边界50px，左右居中，下边界为0*/
+	width:960px;
+	height:38px;
+	color:#333;
+/*	border:#000 solid 1px;*/
+	font-size:14px;
+	padding:0px;
+	overflow:hidden;	
+	}
+#nav li{
+	width:105px;
+	height:36px;
+	float:left;
+	text-align:center;
+	line-height:38px;
+	border-top:#c9cbce solid 1px;
+	border-left:#c9cbce solid 1px;
+	border-bottom:#c9cbce solid 1px;
+	cursor:pointer;
+	
+	}
+#nav li:last-child{
+	border-right:#c9cbce solid 1px;
+	}
+#nav .liclick{
+	border-top:#54b82a solid 2px;
+	border-bottom:none;
+	}
+#nav span{
+	width:100%;
+	height:38px;
+	display:block;
+	position:relative;
+	z-index:-1;
+	}
+</style>
+<script src="js/jquery-1.11.2.min.js"></script>
+<script type="text/jscript">
+$(document).ready(function(e) {
+    //点击li
+	$('#nav li').click(function(e){
+		$('.liclick').removeClass('liclick');
+		$(this).addClass('liclick');
+		});
+	//每个li下面添加一个底色
+	var color=['#b9d329','#c0ebf7','#b9d329','#69bcf3','#79d9f3','#fa5f94','#acd180','#fab4cc','#ffae5b'];
+	$('#nav li').append('<span>');
+	$('#nav span').each(function(index, element) {
+        $(this).css('background-color',color[index]);
+    });
+	//移动到li上的时候颜色升起
+	$('#nav li').hover(function() {
+        $(this).children('span').animate({'top':-38},200);
+		},function(){
+			$(this).children('span').animate({'top':0},200);
+    });
+});
+</script>
+</head>
+
+<body>
+<ul id="nav">
+	<li class="liclick">我的主页</li>
+	<li>哈哈哈</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+</ul>
+</body>
+</html>
